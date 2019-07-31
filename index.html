@@ -1,0 +1,147 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="css\bootstrap.min.css" />
+    <link rel="stylesheet" href="css\main.css" />
+    <link rel="stylesheet" href="css\font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script\jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="script\bootstrap.min.js"></script>
+    <script type="text/javascript" src="script\main.js"></script>
+    <script type="text/javascript" src="script\underscore-min.js"></script>
+    <script src="script\customerdata.json"></script>
+    <script src="script\transactiondata.json"></script>
+    <title>Sharing is Caring</title>
+</head>
+
+<body>
+    <div class="header">
+        <i class="fa fa-heart"></i>Sharing is Caring
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-2 sidenav-container">
+                <div class="sidenav">
+                    <div class="open-cases">
+                        <h3>Open Cases</h3>
+                        <ul class="case-list">
+                            <li class="case">
+                                <a href="#" class="selected">Case 112233</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="closed-cases">
+                        <h3>Closed Cases</h3>
+                        <ul class="case-list">
+                            <li class="case">
+                                <a href="#">Case 738929</a>
+                            </li>
+                            <li class="case">
+                                <a href="#">Case 323123</a>
+                            </li>
+                            <li class="case">
+                                <a href="#">Case 232123</a>
+                            </li>
+                            <li class="case">
+                                <a href="#">Case 553223</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 block main-block">
+                            <h2 class="block-header">Case (112233) Details</h2>
+                            <div class="bank-name">Organization: Berry Western Bank</div>
+                            <div class="subject-list">
+                                <h3 class="subject-header">Customer</h3>
+                                <ul class="subjects">
+                                    <li class="spinner"><i class="fa fa-spinner fa-spin"></i></li>
+                                </ul>
+                            </div>
+                            <div class="accounts-container">
+                                <div class="account-list">
+                                    <h3 class="account-header">Case Accounts</h3>
+                                    <ul class="accounts">
+                                        <li class="account" data-class-case-name="Account #1234">Account #1234</li>
+                                        <li class="account" data-class-subject-name="Account #1234">Account #1234</li>
+                                        <li class="account" data-class-subject-name="Account #1234">Account #1234</li>
+                                        <li class="account" data-class-subject-name="Account #1234">Account #1234</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="block-functions">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="button-container">
+                                            <button class="main-block-init-button btn-primary"
+                                                disabled>Evaluate</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="subjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+                    data-keyboard="false" aria-labelledby="subjectModal" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog modal-lg subject-modal" role="document" data-backdrop="static"
+                        data-keyboard="false">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="subject-modal-title"><span class="subject-name"></span><span
+                                        class="account-name"></span></h3>
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="transaction-container">
+                                    <div class="transactions">
+                                        <ul class="transaction-list">
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary submitButton" disabled>Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" data-backdrop="static"
+                    data-keyboard="false" aria-labelledby="contactModal" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog modal-md contact-modal" role="document" data-backdrop="static"
+                        data-keyboard="false">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="subject-modal-title"></h3>
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="contact-container">
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary submitButton" disabled>Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
