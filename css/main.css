@@ -210,6 +210,9 @@ button.main-block-init-button[disabled] {
 
 /* Transaction List */
 
+.transaction-container {
+    padding: 20px;
+}
 .transaction-container ul.transaction-list {
     list-style-type: none;
     padding:0px;
