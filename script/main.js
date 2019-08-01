@@ -9,6 +9,7 @@ jQuery(document).ready(function() {
 
     caseData.transactions = [
         {
+           "id": 'WIRE-20181013-249073523',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000166633,
@@ -27,6 +28,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "SGD"
         },
         {
+           "id": 'WIRE-20181106-516528615',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000166633,
@@ -45,6 +47,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "SGD"
         },
         {
+           "id": 'WIRE-20181113-603836835',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000166633,
@@ -63,6 +66,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "SGD"
         },
         {
+           "id": 'WIRE-20181213-87124374',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000166633,
@@ -81,6 +85,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "SGD"
         },
         {
+           "id": 'WIRE-20181121-860348753',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000167682,
@@ -99,6 +104,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "EUR"
         },
         {
+           "id": 'WIRE-20181208-427433102',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000167682,
@@ -117,6 +123,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "EUR"
         },
         {
+           "id": 'WIRE-20181201-63290980',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000167682,
@@ -135,6 +142,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 'WIRE-20181202-219510731',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000167682,
@@ -153,6 +161,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 'WIRE-20181202-219511234',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000170094,
@@ -171,6 +180,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 'WIRE-20181202-32903409',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000170094,
@@ -189,6 +199,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 'WIRE-20181202-21231234',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000170094,
@@ -207,6 +218,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 'WIRE-20181202-7278098',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000170094,
@@ -225,6 +237,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 'WIRE-20181202-12039483',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000171496,
@@ -243,6 +256,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "RUB"
         },
         {
+            "id": 'WIRE-20181202-129480983',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000171496,
@@ -261,6 +275,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "RUB"
         },
         {
+            "id": 'WIRE-20181202-120398098',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000171496,
@@ -279,6 +294,7 @@ jQuery(document).ready(function() {
            "original_transaction_currency_std": "RUB"
         },
         {
+            "id": 'WIRE-20181202-98737632',
            "bank_id_std": "GVBCGB",
            "bank_name_std": "Global View Banking Company",
            "customer_id_std": 2000171496,
