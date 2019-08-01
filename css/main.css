@@ -3,6 +3,9 @@
 body {
     background-color: #f2f7fb;
 }
+body .container-fluid > .row {
+    background: linear-gradient(to right, #284b61 0%, #284b61 16.6666%, white 16.6666%, white 100%);
+}
 
 .block {
     background-color: #fff;

@@ -7,7 +7,6 @@ jQuery(document).ready(function () {
     caseData.rawData = "";
 
     caseData.transactions = [{
-        "id": 1,
            "id": 'WIRE-20181013-249073523',
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
@@ -374,9 +373,11 @@ jQuery(document).ready(function () {
         resetUser();
         jQuery('.transaction-container ul.transaction-list').empty();
         jQuery('.transaction-container ul.transaction-list').append("<li class='spinner'><i class='fa fa-spinner fa-spin'></i>");
-        jQuery('.transaction-container').prepend('<h3>Transactions</h3>');
-
-
+        if(jQuery('.transaction-container h3').length == 0) {
+            jQuery('.transaction-container').prepend('<h3>Transactions</h3>');
+        }
+  
+        
         var customerAccount = jQuery(this).attr('data-class-subject-name');
         var customerTransactions = caseData.transactions.filter(function(item) {
             return item.account_number_std == customerAccount;
