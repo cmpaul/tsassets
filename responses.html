@@ -13,7 +13,19 @@
     <script src="script\transactiondata.json"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
+            setTimeout(function() {
+                $('#txn1-pending').hide({ duration: 500 });
+                $('#txn1-complete').show({ duration: 500 });
+            }, 1000);
+            setTimeout(function() {
+                $('#txn2-pending').hide({ duration: 500 });
+                $('#txn2-complete').show({ duration: 500 });
+            }, 3000);
+            setTimeout(function() {
+                $('#txn3-pending').hide({ duration: 500 });
+                $('#txn3-complete').show({ duration: 500 });
+                $('.subject-list').hide({ duration: 500 });
+            }, 10000);
         });
     </script>
     <title>Sharing is Caring | Case 112233 Responses</title>
@@ -21,7 +33,17 @@
 
 <body>
     <div class="header">
-        <i class="fa fa-heart"></i>Sharing is Caring
+        <div class="row">
+            <div class="col-xs-6"><i class="fa fa-heart"></i>Sharing is Caring</div>
+            <div class="col-xs-6 tools">
+                <div class="row">
+                        <span class="notifications">
+                            <i class="fa fa-bell header-icon"></i>
+                        </span>
+                        <span class="settings"><i class="fa fa-cog header-icon"></i></span>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container-fluid">
         <div class="row">
@@ -69,14 +91,14 @@
                     <div class="row">
                         <div class="col-xs-12 block main-block">
                             <h2 class="block-header">Case (112233)</h2>
-                            <div class="bank-name">Organization: Berry Western Bank</div>
+                            <div class="bank-name">Berry Western Bank</div>
                             <div class="subject-list">
                                 <h3 class="subject-header">
                                     <i class="fa fa-clock-o"></i>
                                     Pending
                                 </h3>
                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <div class="panel panel-default" style="display: none;">
+                                    <div id="txn1-pending" class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingOne">
                                             <h4 class="panel-title">
                                                 <a role="button" data-toggle="collapse" data-parent="#accordion"
@@ -86,7 +108,7 @@
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
                                             aria-labelledby="headingOne">
                                             <div class="panel-body">
                                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
@@ -101,7 +123,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="panel panel-default">
+                                    <div id="txn2-pending" class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingTwo">
                                             <h4 class="panel-title">
                                                 <a class="collapsed" role="button" data-toggle="collapse"
@@ -126,7 +148,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="panel panel-default">
+                                    <div id="txn3-pending" class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingThree">
                                             <h4 class="panel-title">
                                                 <a class="collapsed" role="button" data-toggle="collapse"
@@ -160,7 +182,7 @@
                                         Complete
                                     </h3>
                                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-default">
+                                        <div id="txn1-complete" class="panel panel-default" style="display: none;">
                                             <div class="panel-heading" role="tab" id="completeOne">
                                                 <h4 class="panel-title">
                                                     <a role="button" data-toggle="collapse" data-parent="#accordion"
@@ -243,7 +265,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="panel panel-default" style="display: none;">
+                                        <div id="txn2-complete" class="panel panel-default" style="display: none;">
                                             <div class="panel-heading" role="tab" id="collapseTwo">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse"
@@ -326,7 +348,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="panel panel-default" style="display: none;">
+                                        <div id="txn3-complete" class="panel panel-default" style="display: none;">
                                             <div class="panel-heading" role="tab" id="headingThree">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse"
