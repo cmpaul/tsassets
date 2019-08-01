@@ -299,3 +299,7 @@ li.tab.selected {
     position: relative;
     cursor: pointer;
 }
+
+span.notifications a {
+    color: white;
+}
