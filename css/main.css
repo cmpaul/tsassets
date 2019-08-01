@@ -19,7 +19,6 @@ body {
     margin: 0px;
 }
 .main-block {
-    margin-top: 100px;
     padding: 0px;
 }
 li.spinner {
@@ -37,6 +36,22 @@ li.spinner {
 
 .header .fa-heart {
     margin-right: 10px;
+}
+.tools {
+    text-align: right;
+}
+.tools .header-icon {
+    line-height: 60px;
+    height: 60px;
+    border-left: 1px solid white;
+    /* display: block; */
+    padding: 0px 20px;
+    /* border-right: 1px solid white; */
+    box-sizing: border-box;
+}
+
+.header-icons {
+    text-align: right;
 }
 .sidenav-container {
     height: 100%;
@@ -223,4 +238,61 @@ button.main-block-init-button[disabled] {
     content: "\f00c";
     font-family: 'FontAwesome';
     color: #3b7391;
+}
+
+/* Tabs */
+
+.tab-container .tabs {
+    padding: 0px;
+    list-style-type: none;
+    margin: 0px;
+}
+
+.tab-container .tabs li {
+    display: inline-block;
+    height: 40px;
+    margin-right: 0px;
+    background-color: #656565;
+    padding: 5px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px 3px 0px 0px;
+    line-height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.tab-container .tabs li a {
+    color:white;
+}
+
+.tab-container {
+    margin-top: 60px;
+}
+
+li.tab.selected {
+    background-color: #44913b;
+}
+
+/* Notifications */
+
+.header span.notifications.active:after {
+    content: attr(data-notification-count);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    right:7px;
+    background-color: red;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 99px;
+    border: 2px solid white;
+    font-size: 10px;
+    font-weight: bold;
+    z-index:999;
+}
+
+.header span.notifications {
+    position: relative;
+    cursor: pointer;
 }

@@ -40,8 +40,8 @@ jQuery(document).ready(function() {
         var customer_id = jQuery(this).attr('data-class-subject-name');
         var accountsRaw = caseData.rawData.filter(function(item) { return item.customer_id; });
         var accounts = _.groupBy(accountsRaw, function(item) { return item.account_number });
-        console.log(accounts);
-        buildAccounts(accounts);
+
+        //buildAccounts(accounts);
     });
 
     // Account Click
