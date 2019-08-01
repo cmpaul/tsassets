@@ -143,6 +143,7 @@
                 setTimeout(function () {
                     $(`#txn-pending-${id}`).hide({ duration: 500 });
                     $(`#txn-complete-${id}`).show({ duration: 500 });
+                    triggerNotification();
                 }, Math.floor((Math.random() * 10) + 2) * 1000);
             });
         });
