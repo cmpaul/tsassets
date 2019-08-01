@@ -1,4 +1,3 @@
-
 <html>
 
 <head>
@@ -12,6 +11,11 @@
     <script type="text/javascript" src="script\underscore-min.js"></script>
     <script src="script\customerdata.json"></script>
     <script src="script\transactiondata.json"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
     <title>Sharing is Caring | Case 112233 Responses</title>
 </head>
 
@@ -53,355 +57,427 @@
             <div class="col-xs-10">
                 <div class="container">
                     <div class="row">
+                        <div class="col-xs-12">
+                            <div class="tab-container">
+                                <ul class="tabs">
+                                    <li class="tab"><a href="index.html">Inquiries</a></li>
+                                    <li class="tab selected"><a href="responses.html">Responses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-xs-12 block main-block">
-                            <h2 class="block-header">Case (112233) Responses</h2>
+                            <h2 class="block-header">Case (112233)</h2>
                             <div class="bank-name">Organization: Berry Western Bank</div>
                             <div class="subject-list">
-                                <h3 class="subject-header">Pending</h3>
+                                <h3 class="subject-header">
+                                    <i class="fa fa-clock-o"></i>
+                                    Pending
+                                </h3>
                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Collapsible Group Item #1
-                                        </a>
-                                    </h4>
-                                    </div>
-                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="headingTwo">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Collapsible Group Item #2
-                                        </a>
-                                    </h4>
-                                    </div>
-                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                    <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Collapsible Group Item #3
-                                        </a>
-                                    </h4>
-                                    </div>
-                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="accounts-container">
-                                <div class="account-list">
-                                    <h3 class="account-header">
-                                        <i class="fas fa-check-circle"></i>
-                                        Complete
-                                    </h3>
-                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="completeOne">
-                                        <h4 class="panel-title">
-                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseCompleteOne" aria-expanded="true" aria-controls="collapseCompleteOne">
-                                            Collapsible Group Item #1
-                                            </a>
-                                        </h4>
+                                    <div class="panel panel-default" style="display: none;">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                                    href="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    Transaction 1
+                                                </a>
+                                            </h4>
                                         </div>
-                                        <div id="collapseCompleteOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="completeOne">
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                            aria-labelledby="headingOne">
                                             <div class="panel-body">
-                                                <div class="questionaire">
-                                                    <p>
-                                                        Pursuant to Section 314(b) of the USA PATRIOT Act and 31 CFR 1010540, Berry Western Bank is initiating an information sharing request to [BANK NAME HERE].
-                                                        The information shared is subject to confidentiality provisions of Section 314(b) and implementing regulations
-                                                    </p>
-                                                    <p>
-                                                        INFORMATION PROVIDED BY Berry Western Bank
-                                                    </p>
-                                                    <p>
-                                                        <strong>Customer Name:</strong> TBD<br />
-                                                        <strong>TIN/SSN/DL:</strong> TBD<br />
-                                                        <strong>DOB:</strong> TBD<br />
-                                                        <strong>Account Number(s):</strong> TBD<br />
-                                                    </p>
-                                                    <p>
-                                                        Transaction Information
-                                                    </p>
-                                                    <p>
-                                                        <ol>
-                                                            <li>Is the receiver/sender's account Business or Personal?</li>
-                                                            <li>If Business, what is the NAIC code?</li>
-                                                            <li>
-                                                                Is the account opened or closed?
-                                                                <ul>
-                                                                    <li>If closed, when was the account closed?</li>
-                                                                    <li>If closed, did the customer request the closure?</li>
-                                                                </ul>
-                                                            </li>
-                                                            <li>
-                                                                What are the source of funds?
-                                                                <ul>
-                                                                    <li>Txn #1</li>
-                                                                    <li>Txn #2</li>
-                                                                    <li>Txn #3</li>
-                                                                    <li>Txn #4</li>
-                                                                </ul>
-                                                            </li>
-                                                            <li>
-                                                                What are the use of funds?
-                                                                <ul>
-                                                                    <li>Txn #1</li>
-                                                                    <li>Txn #2</li>
-                                                                    <li>Txn #3</li>
-                                                                    <li>Txn #4</li>
-                                                                </ul>
-                                                            </li>
-                                                            <li>
-                                                                Who are the beneficial owners on the account?
-                                                                <ul>
-                                                                    <li>Alice</li>
-                                                                    <li>Bob</li>
-                                                                    <li>Chris</li>
-                                                                    <li>David</li>
-                                                                </ul>
-                                                            </li>
-                                                        </ol>
-                                                    </p>
-                                                    <p>
-                                                        314(b) Point of Contact (POC) for Bank A and Bank B is automatically pulled from FinCEN database.
-                                                    </p>
-                                                </div>
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                                haven't heard of them accusamus labore sustainable VHS.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="collapseTwo">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseCompleteTwo" aria-expanded="false" aria-controls="collapseCompleteTwo">
-                                            Collapsible Group Item #2
-                                            </a>
-                                        </h4>
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse"
+                                                    data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                                    aria-controls="collapseTwo">
+                                                    Transaction 2
+                                                </a>
+                                            </h4>
                                         </div>
-                                        <div id="collapseCompleteTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseTwo">
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                            aria-labelledby="headingTwo">
                                             <div class="panel-body">
-                                                <div class="questionaire">
-                                                    <p>
-                                                        Pursuant to Section 314(b) of the USA PATRIOT Act and 31 CFR 1010540, Berry Western Bank is initiating an information sharing request to [BANK NAME HERE].
-                                                        The information shared is subject to confidentiality provisions of Section 314(b) and implementing regulations
-                                                    </p>
-                                                    <p>
-                                                        INFORMATION PROVIDED BY Berry Western Bank
-                                                    </p>
-                                                    <p>
-                                                        <strong>Customer Name:</strong> TBD<br />
-                                                        <strong>TIN/SSN/DL:</strong> TBD<br />
-                                                        <strong>DOB:</strong> TBD<br />
-                                                        <strong>Account Number(s):</strong> TBD<br />
-                                                    </p>
-                                                    <p>
-                                                        Transaction Information
-                                                    </p>
-                                                    <p>
-                                                        <ol>
-                                                            <li>Is the receiver/sender's account Business or Personal?</li>
-                                                            <li>If Business, what is the NAIC code?</li>
-                                                            <li>
-                                                                Is the account opened or closed?
-                                                                <ul>
-                                                                    <li>If closed, when was the account closed?</li>
-                                                                    <li>If closed, did the customer request the closure?</li>
-                                                                </ul>
-                                                            </li>
-                                                            <li>
-                                                                What are the source of funds?
-                                                                <ul>
-                                                                    <li>Txn #1</li>
-                                                                    <li>Txn #2</li>
-                                                                    <li>Txn #3</li>
-                                                                    <li>Txn #4</li>
-                                                                </ul>
-                                                            </li>
-                                                            <li>
-                                                                What are the use of funds?
-                                                                <ul>
-                                                                    <li>Txn #1</li>
-                                                                    <li>Txn #2</li>
-                                                                    <li>Txn #3</li>
-                                                                    <li>Txn #4</li>
-                                                                </ul>
-                                                            </li>
-                                                            <li>
-                                                                Who are the beneficial owners on the account?
-                                                                <ul>
-                                                                    <li>Alice</li>
-                                                                    <li>Bob</li>
-                                                                    <li>Chris</li>
-                                                                    <li>David</li>
-                                                                </ul>
-                                                            </li>
-                                                        </ol>
-                                                    </p>
-                                                    <p>
-                                                        314(b) Point of Contact (POC) for Bank A and Bank B is automatically pulled from FinCEN database.
-                                                    </p>
-                                                </div>
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                                haven't heard of them accusamus labore sustainable VHS.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingThree">
-                                        <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseCompleteThree" aria-expanded="false" aria-controls="collapseCompleteThree">
-                                            Collapsible Group Item #3
-                                            </a>
-                                        </h4>
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse"
+                                                    data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                                    aria-controls="collapseThree">
+                                                    Transaction 3
+                                                </a>
+                                            </h4>
                                         </div>
-                                        <div id="collapseCompleteThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                        <div class="panel-body">
-                                            <div class="questionaire">
-                                                <p>
-                                                    Pursuant to Section 314(b) of the USA PATRIOT Act and 31 CFR 1010540, Berry Western Bank is initiating an information sharing request to [BANK NAME HERE].
-                                                    The information shared is subject to confidentiality provisions of Section 314(b) and implementing regulations
-                                                </p>
-                                                <p>
-                                                    INFORMATION PROVIDED BY Berry Western Bank
-                                                </p>
-                                                <p>
-                                                    <strong>Customer Name:</strong> TBD<br />
-                                                    <strong>TIN/SSN/DL:</strong> TBD<br />
-                                                    <strong>DOB:</strong> TBD<br />
-                                                    <strong>Account Number(s):</strong> TBD<br />
-                                                </p>
-                                                <p>
-                                                    Transaction Information
-                                                </p>
-                                                <p>
-                                                    <ol>
-                                                        <li>Is the receiver/sender's account Business or Personal?</li>
-                                                        <li>If Business, what is the NAIC code?</li>
-                                                        <li>
-                                                            Is the account opened or closed?
-                                                            <ul>
-                                                                <li>If closed, when was the account closed?</li>
-                                                                <li>If closed, did the customer request the closure?</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            What are the source of funds?
-                                                            <ul>
-                                                                <li>Txn #1</li>
-                                                                <li>Txn #2</li>
-                                                                <li>Txn #3</li>
-                                                                <li>Txn #4</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            What are the use of funds?
-                                                            <ul>
-                                                                <li>Txn #1</li>
-                                                                <li>Txn #2</li>
-                                                                <li>Txn #3</li>
-                                                                <li>Txn #4</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            Who are the beneficial owners on the account?
-                                                            <ul>
-                                                                <li>Alice</li>
-                                                                <li>Bob</li>
-                                                                <li>Chris</li>
-                                                                <li>David</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ol>
-                                                </p>
-                                                <p>
-                                                    314(b) Point of Contact (POC) for Bank A and Bank B is automatically pulled from FinCEN database.
-                                                </p>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                            aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                                single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                                haven't heard of them accusamus labore sustainable VHS.
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="block-functions">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="button-container">
-                                            <button class="main-block-init-button btn-primary"
-                                                disabled>Evaluate</button>
+                            <div class="accounts-container">
+                                <div class="account-list">
+                                    <h3 class="account-header">
+                                        <i class="fa fa-check-circle"></i>
+                                        Complete
+                                    </h3>
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="completeOne">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                                        href="#collapseCompleteOne" aria-expanded="true"
+                                                        aria-controls="collapseCompleteOne">
+                                                        Transaction 1
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseCompleteOne" class="panel-collapse collapse"
+                                                role="tabpanel" aria-labelledby="completeOne">
+                                                <div class="panel-body">
+                                                    <div class="questionaire">
+                                                        <p>
+                                                            Pursuant to Section 314(b) of the USA PATRIOT Act and 31 CFR
+                                                            1010540, Berry Western Bank is initiating an information
+                                                            sharing request to [BANK NAME HERE].
+                                                            The information shared is subject to confidentiality
+                                                            provisions of Section 314(b) and implementing regulations
+                                                        </p>
+                                                        <p>
+                                                            INFORMATION PROVIDED BY Berry Western Bank
+                                                        </p>
+                                                        <p>
+                                                            <strong>Customer Name:</strong> TBD<br />
+                                                            <strong>TIN/SSN/DL:</strong> TBD<br />
+                                                            <strong>DOB:</strong> TBD<br />
+                                                            <strong>Account Number(s):</strong> TBD<br />
+                                                        </p>
+                                                        <p>
+                                                            Transaction Information
+                                                        </p>
+                                                        <p>
+                                                            <ol>
+                                                                <li>Is the receiver/sender's account Business or
+                                                                    Personal?</li>
+                                                                <li>If Business, what is the NAIC code?</li>
+                                                                <li>
+                                                                    Is the account opened or closed?
+                                                                    <ul>
+                                                                        <li>If closed, when was the account closed?</li>
+                                                                        <li>If closed, did the customer request the
+                                                                            closure?</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    What are the source of funds?
+                                                                    <ul>
+                                                                        <li>Txn #1</li>
+                                                                        <li>Txn #2</li>
+                                                                        <li>Txn #3</li>
+                                                                        <li>Txn #4</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    What are the use of funds?
+                                                                    <ul>
+                                                                        <li>Txn #1</li>
+                                                                        <li>Txn #2</li>
+                                                                        <li>Txn #3</li>
+                                                                        <li>Txn #4</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    Who are the beneficial owners on the account?
+                                                                    <ul>
+                                                                        <li>Alice</li>
+                                                                        <li>Bob</li>
+                                                                        <li>Chris</li>
+                                                                        <li>David</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ol>
+                                                        </p>
+                                                        <p>
+                                                            314(b) Point of Contact (POC) for Bank A and Bank B is
+                                                            automatically pulled from FinCEN database.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" style="display: none;">
+                                            <div class="panel-heading" role="tab" id="collapseTwo">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                                        data-parent="#accordion" href="#collapseCompleteTwo"
+                                                        aria-expanded="false" aria-controls="collapseCompleteTwo">
+                                                        Transaction 2
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseCompleteTwo" class="panel-collapse collapse"
+                                                role="tabpanel" aria-labelledby="collapseTwo">
+                                                <div class="panel-body">
+                                                    <div class="questionaire">
+                                                        <p>
+                                                            Pursuant to Section 314(b) of the USA PATRIOT Act and 31 CFR
+                                                            1010540, Berry Western Bank is initiating an information
+                                                            sharing request to [BANK NAME HERE].
+                                                            The information shared is subject to confidentiality
+                                                            provisions of Section 314(b) and implementing regulations
+                                                        </p>
+                                                        <p>
+                                                            INFORMATION PROVIDED BY Berry Western Bank
+                                                        </p>
+                                                        <p>
+                                                            <strong>Customer Name:</strong> TBD<br />
+                                                            <strong>TIN/SSN/DL:</strong> TBD<br />
+                                                            <strong>DOB:</strong> TBD<br />
+                                                            <strong>Account Number(s):</strong> TBD<br />
+                                                        </p>
+                                                        <p>
+                                                            Transaction Information
+                                                        </p>
+                                                        <p>
+                                                            <ol>
+                                                                <li>Is the receiver/sender's account Business or
+                                                                    Personal?</li>
+                                                                <li>If Business, what is the NAIC code?</li>
+                                                                <li>
+                                                                    Is the account opened or closed?
+                                                                    <ul>
+                                                                        <li>If closed, when was the account closed?</li>
+                                                                        <li>If closed, did the customer request the
+                                                                            closure?</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    What are the source of funds?
+                                                                    <ul>
+                                                                        <li>Txn #1</li>
+                                                                        <li>Txn #2</li>
+                                                                        <li>Txn #3</li>
+                                                                        <li>Txn #4</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    What are the use of funds?
+                                                                    <ul>
+                                                                        <li>Txn #1</li>
+                                                                        <li>Txn #2</li>
+                                                                        <li>Txn #3</li>
+                                                                        <li>Txn #4</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    Who are the beneficial owners on the account?
+                                                                    <ul>
+                                                                        <li>Alice</li>
+                                                                        <li>Bob</li>
+                                                                        <li>Chris</li>
+                                                                        <li>David</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ol>
+                                                        </p>
+                                                        <p>
+                                                            314(b) Point of Contact (POC) for Bank A and Bank B is
+                                                            automatically pulled from FinCEN database.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" style="display: none;">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                                        data-parent="#accordion" href="#collapseCompleteThree"
+                                                        aria-expanded="false" aria-controls="collapseCompleteThree">
+                                                        Transaction 3
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseCompleteThree" class="panel-collapse collapse"
+                                                role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <div class="questionaire">
+                                                        <p>
+                                                            Pursuant to Section 314(b) of the USA PATRIOT Act and 31 CFR
+                                                            1010540, Berry Western Bank is initiating an information
+                                                            sharing request to [BANK NAME HERE].
+                                                            The information shared is subject to confidentiality
+                                                            provisions of Section 314(b) and implementing regulations
+                                                        </p>
+                                                        <p>
+                                                            INFORMATION PROVIDED BY Berry Western Bank
+                                                        </p>
+                                                        <p>
+                                                            <strong>Customer Name:</strong> TBD<br />
+                                                            <strong>TIN/SSN/DL:</strong> TBD<br />
+                                                            <strong>DOB:</strong> TBD<br />
+                                                            <strong>Account Number(s):</strong> TBD<br />
+                                                        </p>
+                                                        <p>
+                                                            Transaction Information
+                                                        </p>
+                                                        <p>
+                                                            <ol>
+                                                                <li>Is the receiver/sender's account Business or
+                                                                    Personal?</li>
+                                                                <li>If Business, what is the NAIC code?</li>
+                                                                <li>
+                                                                    Is the account opened or closed?
+                                                                    <ul>
+                                                                        <li>If closed, when was the account closed?</li>
+                                                                        <li>If closed, did the customer request the
+                                                                            closure?</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    What are the source of funds?
+                                                                    <ul>
+                                                                        <li>Txn #1</li>
+                                                                        <li>Txn #2</li>
+                                                                        <li>Txn #3</li>
+                                                                        <li>Txn #4</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    What are the use of funds?
+                                                                    <ul>
+                                                                        <li>Txn #1</li>
+                                                                        <li>Txn #2</li>
+                                                                        <li>Txn #3</li>
+                                                                        <li>Txn #4</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>
+                                                                    Who are the beneficial owners on the account?
+                                                                    <ul>
+                                                                        <li>Alice</li>
+                                                                        <li>Bob</li>
+                                                                        <li>Chris</li>
+                                                                        <li>David</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ol>
+                                                        </p>
+                                                        <p>
+                                                            314(b) Point of Contact (POC) for Bank A and Bank B is
+                                                            automatically pulled from FinCEN database.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="modal fade" id="subjectModal" tabindex="-1" role="dialog" data-backdrop="static"
-                    data-keyboard="false" aria-labelledby="subjectModal" aria-hidden="true" style="display: none;">
-                    <div class="modal-dialog modal-lg subject-modal" role="document" data-backdrop="static"
-                        data-keyboard="false">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="subject-modal-title"><span class="subject-name"></span><span
-                                        class="account-name"></span></h3>
+                        <div class="modal fade" id="subjectModal" tabindex="-1" role="dialog" data-backdrop="static"
+                            data-keyboard="false" aria-labelledby="subjectModal" aria-hidden="true"
+                            style="display: none;">
+                            <div class="modal-dialog modal-lg subject-modal" role="document" data-backdrop="static"
+                                data-keyboard="false">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="subject-modal-title"><span
+                                                class="subject-name"></span><span class="account-name"></span></h3>
 
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="transaction-container">
-                                    <div class="transactions">
-                                        <ul class="transaction-list">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="transaction-container">
+                                            <div class="transactions">
+                                                <ul class="transaction-list">
 
-                                        </ul>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary submitButton"
+                                            disabled>Submit</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary submitButton" disabled>Submit</button>
-                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" data-backdrop="static"
-                    data-keyboard="false" aria-labelledby="contactModal" aria-hidden="true" style="display: none;">
-                    <div class="modal-dialog modal-md contact-modal" role="document" data-backdrop="static"
-                        data-keyboard="false">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="subject-modal-title"></h3>
+                        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" data-backdrop="static"
+                            data-keyboard="false" aria-labelledby="contactModal" aria-hidden="true"
+                            style="display: none;">
+                            <div class="modal-dialog modal-md contact-modal" role="document" data-backdrop="static"
+                                data-keyboard="false">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="subject-modal-title"></h3>
 
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="contact-container">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="contact-container">
 
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary submitButton"
+                                            disabled>Submit</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary submitButton" disabled>Submit</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
