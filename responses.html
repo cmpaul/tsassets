@@ -151,7 +151,7 @@
                         $('.gen-graph').attr('disabled', false)
                     }
                     console.log(doneCount);
-                }, 1000); //Math.floor((Math.random() * 10) + 2) * 1000);
+                }, Math.floor((Math.random() * 10) + 2) * 1000);
             });
 
             $('.gen-graph').on('click', function(evt) {
@@ -330,7 +330,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 text-center" style="margin: 20px;">
-                                <button class="gen-graph btn btn-lg btn-primary" disabled>Generate Transaction Graph</button>
+                                <button class="gen-graph btn btn-lg btn-primary" disabled>Generate Network</button>
                             </div>
                         </div>
                         <div class="modal fade" id="graphModal" tabindex="-1" role="dialog" data-backdrop="static"
@@ -340,8 +340,7 @@
                                 data-keyboard="false">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h3 class="modal-title" id="subject-modal-title">Transaction Graph</h3>
-
+                                        <h3 class="modal-title" id="subject-modal-title">Transaction Network</h3>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <i class="fa fa-close"></i>
                                         </button>
