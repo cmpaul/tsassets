@@ -1,3 +1,17 @@
+
+function triggerNotification() {
+    var notificationCount;
+    if(jQuery('.notifications').attr('data-notification-count') == "undefined" || jQuery('.notifications').attr('data-notification-count') == null) {
+        notificationCount = 1;
+    } else {
+
+        notificationCount = parseInt(jQuery('.notifications').attr('data-notification-count'));
+        notificationCount++;
+    }
+    jQuery('.notifications').addClass('active');
+    jQuery('.notifications').attr('data-notification-count', notificationCount);
+};
+
 jQuery(document).ready(function () {
     var userAccount = {};
     var transactions = [];
@@ -503,11 +517,6 @@ jQuery(document).ready(function () {
         jQuery('.main-block .accounts-container').empty();
         jQuery('.main-block .accounts-container').append(accountsTemplate);
     }
-
-    function triggerNotification() {
-        jQuery('.notifications').addClass('active');
-        jQuery('.notifications').attr('data-notification-count', 1);
-    };
 
     function buildTransactions(data, target) {
         target.empty()
