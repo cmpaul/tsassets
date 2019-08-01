@@ -58,17 +58,17 @@
         function generateQuestionaire(txn) {
             var id = txn.id;
             return `<div id="txn-complete-${id}" class="panel panel-default txn-complete" style="display: none;">
-                <div class="panel-heading" role="tab" id="headingThree">
+                <div class="panel-heading" role="tab" id="heading-q-${id}">
                     <h4 class="panel-title">
                         <a class="collapsed" role="button" data-toggle="collapse"
-                            data-parent="#accordion" href="#collapseCompleteThree"
-                            aria-expanded="false" aria-controls="collapseCompleteThree">
+                            data-parent="#accordion" href="#collapse-questionaire-${id}"
+                            aria-expanded="false" aria-controls="collapse-questionaire-${id}">
                             Transaction ${id} - ${txn.originator_financial_institution_name_std}
                         </a>
                     </h4>
                 </div>
-                <div id="collapseCompleteThree" class="panel-collapse collapse"
-                    role="tabpanel" aria-labelledby="headingThree">
+                <div id="collapse-questionaire-${id}" class="panel-collapse collapse"
+                    role="tabpanel" aria-labelledby="heading-q-${id}">
                     <div class="panel-body">
                         <div class="questionaire">
                             <p>
@@ -151,15 +151,17 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="row">
-            <div class="col-xs-6"><i class="fa fa-heart"></i>Sharing is Caring</div>
-            <div class="col-xs-6 tools">
-                <div class="row">
-                    <span class="notifications">
-                        <i class="fa fa-bell header-icon"></i>
-                    </span>
-                    <span class="settings"><i class="fa fa-cog header-icon"></i></span>
+    <div class="gradient header row">
+        <div class="col-xs-8">
+            <h3><i class="fa fa-heart"></i>Sharing is Caring</h3>
+        </div>
+        <div class="col-xs-4 tools">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="pull-right">
+                        <span class="notifications"><a href="responses.html"><i class="fa fa-bell header-icon"></i></a></span>
+                        <span class="settings"><i class="fa fa-cog header-icon"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
