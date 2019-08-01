@@ -133,7 +133,7 @@ a.selected {
 }
 .subject-list li.subject.active:before {
     background-color:#3b7391;
-} 
+}
 .subject-list li.subject:hover:before {
     background-color:#3b7391;
 }
@@ -178,7 +178,7 @@ a.selected {
 .account-list li.account.active:before {
     background-color:#3b7391;
     border: 2px solid #76a1b9;
-} 
+}
 .account-list li.account:hover:before {
     background-color:#3b7391;
 }
@@ -210,6 +210,9 @@ button.main-block-init-button[disabled] {
 
 /* Transaction List */
 
+.transaction-container {
+    padding: 20px;
+}
 .transaction-container ul.transaction-list {
     list-style-type: none;
     padding:0px;
