@@ -7,6 +7,37 @@ jQuery(document).ready(function() {
     caseData.organization = "Berry Western Bank";
     caseData.rawData = "";
 
+    caseData.customers = [
+        {
+           "account_number": "GVBCGB00000000166976",
+           "full_name": "Serrano Group LTD",
+           "address": "6296 Nathan Place Apt. 447  Parbold  West Lancashire",
+           "phone_number": 7192064048,
+           "primary_source_of_funds": "Business Activity"
+        },
+        {
+           "account_number": "GVBCGB00000000168025",
+           "full_name": "Lee and Sons LTD",
+           "address": "928 Meyer Plaza Apt. 845  King's Cross  Camden",
+           "phone_number": 7933396367,
+           "primary_source_of_funds": "Business Activity"
+        },
+        {
+           "account_number": "GVBCGB00000000170437",
+           "full_name": "Bradford LTD",
+           "address": "71394 Silva Ferry Suite 721  Purewell  Christchurch",
+           "phone_number": 7690674442,
+           "primary_source_of_funds": "Business Activity"
+        },
+        {
+           "account_number": "GVBCGB00000000171839",
+           "full_name": "Allen",
+           "address": " 3555 Wilcox Brooks Johnston and Hernandez LTD  West Kirby  Wirral",
+           "phone_number": 7817926211,
+           "primary_source_of_funds": "Business Activity"
+        }
+     ]
+
     jQuery.ajax({
             type: 'GET',
             headers: {
@@ -96,10 +127,17 @@ jQuery(document).ready(function() {
         jQuery('.subject-list ul').empty();
 
         for(c in customers) {
-            var subjectTemplate = '<li class="subject" data-class-subject-name="{{CUSTOMERID}}">{{CUSTOMERNAME}}</li>';
+            var subjectTemplate = '<li class="subject" data-class-subject-name="{{ACCOUNT}}"><div class="account-info"><div class="name">{{NAME}}</div><div class="account-number">{{ACCOUNT}}</div> \
+                                        <div class="address">Address: {{ADDRESS}}</div> \
+                                        <div class="phone-number">Phone Number: {{PHONE}}</div> \
+                                        <div class="psof">Primary Source of Funds: {{FUNDSOURCE}}</div> \
+                                        </div></li>';
 
-            subjectTemplate = subjectTemplate.replace(/{{CUSTOMERID}}/, customers[c].customer_id);
-            subjectTemplate = subjectTemplate.replace(/{{CUSTOMERNAME}}/, customers[c].full_name);
+                subjectTemplate = subjectTemplate.replace(/{{NAME}}/g, customers[c].full_name);
+                subjectTemplate = subjectTemplate.replace(/{{ACCOUNT}}/g, customers[c].account_number);
+                subjectTemplate = subjectTemplate.replace(/{{ADDRESS}}/g, customers[c].address);
+                subjectTemplate = subjectTemplate.replace(/{{PHONE}}/g, customers[c].phone_number);
+                subjectTemplate = subjectTemplate.replace(/{{FUNDSOURCE}}/g, customers[c].primary_source_of_funds);
 
             jQuery('.subject-list ul').append(subjectTemplate);
         }
@@ -132,9 +170,19 @@ jQuery(document).ready(function() {
                                     </ul> \
                                 </div>'
         for(d in subjects) {
-                var accountTemplate = "<li class='account' data-account-name='{{ACCOUNTNAME}}'>{{ACCOUNTNAME}}</li>";
+                var accountTemplate = '<div class="account-info"><div class="name">{{NAME}}</div><div class="account-number">{{ACCOUNT}}</div> \
+                                        <div class="address">{{ADDRESS}}</div> \
+                                        <div class="phone-number">{{PHONE}}</div> \
+                                        <div class="psof">{{FUNDSOURCE}}</div> \
+                                        </div>';
+
                 var account = accountTemplate;
-                account = account.replace(/{{ACCOUNTNAME}}/g, subjects[d].account_number);
+                account = account.replace(/{{NAME}}/g, subjects[d].account_number);
+                account = account.replace(/{{ACCOUNT}}/g, subjects[d].account_number);
+                account = account.replace(/{{ADDRESS}}/g, subjects[d].account_number);
+                account = account.replace(/{{PHONE}}/g, subjects[d].account_number);
+                account = account.replace(/{{FUNDSOURCE}}/g, subjects[d].account_number);
+
                 accountsMarkup += account;
         }
 
@@ -143,6 +191,11 @@ jQuery(document).ready(function() {
         jQuery('.main-block .accounts-container').empty();
         jQuery('.main-block .accounts-container').append(accountsTemplate);
     }
+
+    function triggerNotification() {
+        jQuery('.notifications').addClass('active');
+        jQuery('.notifications').attr('data-notification-count', 1);
+    };
 
     function buildTransactions(data, target) {
         target.empty()

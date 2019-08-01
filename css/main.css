@@ -95,6 +95,9 @@ a.selected {
 .subject-list {
     padding: 20px 20px 0px 20px;
 }
+.subject-list .subject .account-info .name {
+    font-weight: bold;
+}
 .subject-list .subject-header {
     margin: 15px 0px;
 }
