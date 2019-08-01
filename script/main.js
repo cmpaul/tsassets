@@ -7,6 +7,7 @@ jQuery(document).ready(function () {
     caseData.rawData = "";
 
     caseData.transactions = [{
+        "id": 1,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000166633,
@@ -25,6 +26,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "SGD"
         },
         {
+            "id": 2,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000166633,
@@ -43,6 +45,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "SGD"
         },
         {
+            "id": 3,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000166633,
@@ -61,6 +64,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "SGD"
         },
         {
+            "id": 4,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000166633,
@@ -79,6 +83,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "SGD"
         },
         {
+            "id": 5,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000167682,
@@ -97,6 +102,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 6,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000167682,
@@ -115,6 +121,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 7,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000167682,
@@ -133,6 +140,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 8,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000167682,
@@ -151,6 +159,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 9,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000170094,
@@ -169,6 +178,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 10,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000170094,
@@ -187,6 +197,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 11,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000170094,
@@ -205,6 +216,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 12,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000170094,
@@ -223,6 +235,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "EUR"
         },
         {
+            "id": 13,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000171496,
@@ -241,6 +254,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "RUB"
         },
         {
+            "id": 14,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000171496,
@@ -259,6 +273,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "RUB"
         },
         {
+            "id": 15,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000171496,
@@ -277,6 +292,7 @@ jQuery(document).ready(function () {
             "original_transaction_currency_std": "RUB"
         },
         {
+            "id": 16,
             "bank_id_std": "GVBCGB",
             "bank_name_std": "Global View Banking Company",
             "customer_id_std": 2000171496,
@@ -354,8 +370,8 @@ jQuery(document).ready(function () {
         jQuery('.subject-list .subject').removeClass('active');
         jQuery(this).addClass('active');
         resetUser();
-        jQuery('.transaction-container ul.transactions').empty();
-        jQuery('.transaction-container ul.transactions').append("<li class='spinner'><i class='fa fa-spinner fa-spin'></i>");
+        jQuery('.transaction-container ul.transaction-list').empty();
+        jQuery('.transaction-container ul.transaction-list').append("<li class='spinner'><i class='fa fa-spinner fa-spin'></i>");
         jQuery('.transaction-container').prepend('<h3>Transactions</h3>');
   
         
@@ -399,25 +415,14 @@ jQuery(document).ready(function () {
 
     jQuery('.main-block-init-button').on('click', function () {
         if (jQuery(this).attr('disabled') == null || jQuery(this).attr('disabled') == undefined) {
+            var transactions = [];
 
-            jQuery('.transaction-container ul.transaction-list').empty();
-            jQuery('.transaction-container ul.transaction-list').append('<li class="spinner"><i class="fa fa-spinner fa-spin"></i>');
-            jQuery('#subject-modal-title .subject-name').text(userAccount.user);
-            jQuery('#subject-modal-title .account-name').text(userAccount.account);
-
-            // *Replace with API*
-
-            var customerAccount = jQuery(this).attr('data-class-subject-name');
-            var customerTransacations = caseData.transactions.filter(function(item) {
-                return item == customerAccount;
+            jQuery('.transaction-list .transaction.active').each(function() {
+                var id = jQuery(this).attr('data-transaction-id');
+                transactions.push(id);
             });
 
-
-            setTimeout(function () {
-                buildTransactions(customerTransactions, jQuery('.transaction-container ul.transactions'))
-            }, 2000);
-
-            jQuery('#subjectModal').modal('show');
+            window.location.href = "/responses.html?ids=" + transactions.join(',');
         }
     })
 
@@ -458,9 +463,9 @@ jQuery(document).ready(function () {
 
     function transactionButtonState() {
         if (transactions.length > 0) {
-            jQuery('#subjectModal .submitButton').removeAttr('disabled');
+            jQuery('.main-block .main-block-init-button').removeAttr('disabled');
         } else {
-            jQuery('#subjectModal .submitButton').attr('disabled', 'disabled');
+            jQuery('.main-block .main-block-init-button').attr('disabled', 'disabled');
         }
     }
 
@@ -504,7 +509,7 @@ jQuery(document).ready(function () {
     function buildTransactions(data, target) {
         target.empty()
         for (d in data) {
-            var transactionTemplate = '<li class="transaction" data-transaction-id="{{ACCTNUMBER}}"> \
+            var transactionTemplate = '<li class="transaction" data-transaction-id="{{ID}}"> \
                                                 <div class="row"> \
                                                     <div class="col-xs-5 account-numb"> \
                                                         Acct Number:{{ACCTNUMBER}} \
@@ -529,6 +534,7 @@ jQuery(document).ready(function () {
                                                     </div> \
                                                 </div> \
                                     </li>';
+            transactionTemplate = transactionTemplate.replace(/{{ID}}/g, data[d].id);
             transactionTemplate = transactionTemplate.replace(/{{ACCTNUMBER}}/g, data[d].account_number_std);
             transactionTemplate = transactionTemplate.replace(/{{TRANSACTIONTYPE}}/, data[d].credit_debit_flag_std);
             transactionTemplate = transactionTemplate.replace(/{{ORIGACCTNUMB}}/, data[d].originator_account_number_std);
