@@ -103,7 +103,6 @@ jQuery(document).ready(function() {
 
             jQuery('.subject-list ul').append(subjectTemplate);
         }
-
     }
 
     function initBankName(name) {
