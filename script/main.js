@@ -7,6 +7,328 @@ jQuery(document).ready(function() {
     caseData.organization = "Berry Western Bank";
     caseData.rawData = "";
 
+    caseData.transactions = [
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000166633,
+           "account_number_std": "GVBCGB00000000166976",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "WIRE-20190525-593836587",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "wire_transfer",
+           "originator_account_number_std": "SRBASG00000000459529",
+           "originator_financial_institution_std": "SRBASG",
+           "originator_financial_institution_name_std": "South Rivers Bank",
+           "beneficiary_account_number_std": "GVBCGB00000000166976",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 4581.58,
+           "original_transaction_currency_std": "SGD"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000166633,
+           "account_number_std": "GVBCGB00000000166976",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "WIRE-20190525-593836587",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "wire_transfer",
+           "originator_account_number_std": "SRBASG00000000459529",
+           "originator_financial_institution_std": "SRBASG",
+           "originator_financial_institution_name_std": "South Rivers Bank",
+           "beneficiary_account_number_std": "GVBCGB00000000166976",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 4500.58,
+           "original_transaction_currency_std": "SGD"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000166633,
+           "account_number_std": "GVBCGB00000000166976",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "WIRE-20190525-593836587",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "wire_transfer",
+           "originator_account_number_std": "SRBASG00000000459529",
+           "originator_financial_institution_std": "SRBASG",
+           "originator_financial_institution_name_std": "South Rivers Bank",
+           "beneficiary_account_number_std": "GVBCGB00000000166976",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 5000.76,
+           "original_transaction_currency_std": "SGD"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000166633,
+           "account_number_std": "GVBCGB00000000166976",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "WIRE-20190525-593836587",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "wire_transfer",
+           "originator_account_number_std": "SRBASG00000000459529",
+           "originator_financial_institution_std": "SRBASG",
+           "originator_financial_institution_name_std": "South Rivers Bank",
+           "beneficiary_account_number_std": "GVBCGB00000000166976",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 3500.6,
+           "original_transaction_currency_std": "SGD"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000167682,
+           "account_number_std": "GVBCGB00000000168025",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "ACH-20190303-714775323",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "ach",
+           "originator_account_number_std": "ASBGIE00000000810483",
+           "originator_financial_institution_std": "ASBGIE",
+           "originator_financial_institution_name_std": "Altantic Seaboard Banking Group",
+           "beneficiary_account_number_std": "GVBCGB00000000168025",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 1897.92,
+           "original_transaction_currency_std": "EUR"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000167682,
+           "account_number_std": "GVBCGB00000000168025",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "ACH-20190303-714775323",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "ach",
+           "originator_account_number_std": "ASBGIE00000000810483",
+           "originator_financial_institution_std": "ASBGIE",
+           "originator_financial_institution_name_std": "Altantic Seaboard Banking Group",
+           "beneficiary_account_number_std": "GVBCGB00000000168025",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 650.92,
+           "original_transaction_currency_std": "EUR"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000167682,
+           "account_number_std": "GVBCGB00000000168025",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "ACH-20190303-714775323",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "ach",
+           "originator_account_number_std": "ASBGIE00000000810483",
+           "originator_financial_institution_std": "ASBGIE",
+           "originator_financial_institution_name_std": "Altantic Seaboard Banking Group",
+           "beneficiary_account_number_std": "GVBCGB00000000168025",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 6547.92,
+           "original_transaction_currency_std": "EUR"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000167682,
+           "account_number_std": "GVBCGB00000000168025",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "ACH-20190303-714775323",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "ach",
+           "originator_account_number_std": "ASBGIE00000000810483",
+           "originator_financial_institution_std": "ASBGIE",
+           "originator_financial_institution_name_std": "Altantic Seaboard Banking Group",
+           "beneficiary_account_number_std": "GVBCGB00000000168025",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 743.87,
+           "original_transaction_currency_std": "EUR"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000170094,
+           "account_number_std": "GVBCGB00000000170437",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "WIRE-20190325-838751407",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "wire_transfer",
+           "originator_account_number_std": "BDEUDE00000000681949",
+           "originator_financial_institution_std": "BDEUDE",
+           "originator_financial_institution_name_std": "Bank de Europa",
+           "beneficiary_account_number_std": "GVBCGB00000000170437",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 6545.84,
+           "original_transaction_currency_std": "EUR"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000170094,
+           "account_number_std": "GVBCGB00000000170437",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "WIRE-20190325-838751407",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "wire_transfer",
+           "originator_account_number_std": "BDEUDE00000000681949",
+           "originator_financial_institution_std": "BDEUDE",
+           "originator_financial_institution_name_std": "Bank de Europa",
+           "beneficiary_account_number_std": "GVBCGB00000000170437",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 4500.84,
+           "original_transaction_currency_std": "EUR"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000170094,
+           "account_number_std": "GVBCGB00000000170437",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "WIRE-20190325-838751407",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "wire_transfer",
+           "originator_account_number_std": "BDEUDE00000000681949",
+           "originator_financial_institution_std": "BDEUDE",
+           "originator_financial_institution_name_std": "Bank de Europa",
+           "beneficiary_account_number_std": "GVBCGB00000000170437",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 3213.54,
+           "original_transaction_currency_std": "EUR"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000170094,
+           "account_number_std": "GVBCGB00000000170437",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "WIRE-20190325-838751407",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "wire_transfer",
+           "originator_account_number_std": "BDEUDE00000000681949",
+           "originator_financial_institution_std": "BDEUDE",
+           "originator_financial_institution_name_std": "Bank de Europa",
+           "beneficiary_account_number_std": "GVBCGB00000000170437",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 543.85,
+           "original_transaction_currency_std": "EUR"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000171496,
+           "account_number_std": "GVBCGB00000000171839",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "ACH-20190509-599599594",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "ach",
+           "originator_account_number_std": "CSBARU00000000186765",
+           "originator_financial_institution_std": "CSBARU",
+           "originator_financial_institution_name_std": "Central Steppes Bank",
+           "beneficiary_account_number_std": "GVBCGB00000000171839",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 24565.13,
+           "original_transaction_currency_std": "RUB"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000171496,
+           "account_number_std": "GVBCGB00000000171839",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "ACH-20190509-599599594",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "ach",
+           "originator_account_number_std": "CSBARU00000000186765",
+           "originator_financial_institution_std": "CSBARU",
+           "originator_financial_institution_name_std": "Central Steppes Bank",
+           "beneficiary_account_number_std": "GVBCGB00000000171839",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 2432.65,
+           "original_transaction_currency_std": "RUB"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000171496,
+           "account_number_std": "GVBCGB00000000171839",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "ACH-20190509-599599594",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "ach",
+           "originator_account_number_std": "CSBARU00000000186765",
+           "originator_financial_institution_std": "CSBARU",
+           "originator_financial_institution_name_std": "Central Steppes Bank",
+           "beneficiary_account_number_std": "GVBCGB00000000171839",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 6544.17,
+           "original_transaction_currency_std": "RUB"
+        },
+        {
+           "bank_id_std": "GVBCGB",
+           "bank_name_std": "Global View Banking Company",
+           "customer_id_std": 2000171496,
+           "account_number_std": "GVBCGB00000000171839",
+           "primary_source_of_funds_std": "Business Activity",
+           "reference_number_std": "ACH-20190509-599599594",
+           "credit_debit_flag_std": "credit",
+           "transaction_type_std": "ach",
+           "originator_account_number_std": "CSBARU00000000186765",
+           "originator_financial_institution_std": "CSBARU",
+           "originator_financial_institution_name_std": "Central Steppes Bank",
+           "beneficiary_account_number_std": "GVBCGB00000000171839",
+           "beneficiary_financial_institution_std": "GVBCGB",
+           "beneficiary_financial_institution_name_std": "Global View Banking Corporation",
+           "original_transaction_amount_std": 232.13,
+           "original_transaction_currency_std": "RUB"
+        }
+     ];
+
+    caseData.customers = [
+        {
+           "account_number": "GVBCGB00000000166976",
+           "full_name": "Serrano Group LTD",
+           "address": "6296 Nathan Place Apt. 447  Parbold  West Lancashire",
+           "phone_number": 7192064048,
+           "primary_source_of_funds": "Business Activity"
+        },
+        {
+           "account_number": "GVBCGB00000000168025",
+           "full_name": "Lee and Sons LTD",
+           "address": "928 Meyer Plaza Apt. 845  King's Cross  Camden",
+           "phone_number": 7933396367,
+           "primary_source_of_funds": "Business Activity"
+        },
+        {
+           "account_number": "GVBCGB00000000170437",
+           "full_name": "Bradford LTD",
+           "address": "71394 Silva Ferry Suite 721  Purewell  Christchurch",
+           "phone_number": 7690674442,
+           "primary_source_of_funds": "Business Activity"
+        },
+        {
+           "account_number": "GVBCGB00000000171839",
+           "full_name": "Allen",
+           "address": " 3555 Wilcox Brooks Johnston and Hernandez LTD  West Kirby  Wirral",
+           "phone_number": 7817926211,
+           "primary_source_of_funds": "Business Activity"
+        }
+     ]
+
     jQuery.ajax({
             type: 'GET',
             headers: {
@@ -96,10 +418,17 @@ jQuery(document).ready(function() {
         jQuery('.subject-list ul').empty();
 
         for(c in customers) {
-            var subjectTemplate = '<li class="subject" data-class-subject-name="{{CUSTOMERID}}">{{CUSTOMERNAME}}</li>';
+            var subjectTemplate = '<li class="subject" data-class-subject-name="{{ACCOUNT}}"><div class="account-info"><div class="name">{{NAME}}</div><div class="account-number">{{ACCOUNT}}</div> \
+                                        <div class="address">Address: {{ADDRESS}}</div> \
+                                        <div class="phone-number">Phone Number: {{PHONE}}</div> \
+                                        <div class="psof">Primary Source of Funds: {{FUNDSOURCE}}</div> \
+                                        </div></li>';
 
-            subjectTemplate = subjectTemplate.replace(/{{CUSTOMERID}}/, customers[c].customer_id);
-            subjectTemplate = subjectTemplate.replace(/{{CUSTOMERNAME}}/, customers[c].full_name);
+                subjectTemplate = subjectTemplate.replace(/{{NAME}}/g, customers[c].full_name);
+                subjectTemplate = subjectTemplate.replace(/{{ACCOUNT}}/g, customers[c].account_number);
+                subjectTemplate = subjectTemplate.replace(/{{ADDRESS}}/g, customers[c].address);
+                subjectTemplate = subjectTemplate.replace(/{{PHONE}}/g, customers[c].phone_number);
+                subjectTemplate = subjectTemplate.replace(/{{FUNDSOURCE}}/g, customers[c].primary_source_of_funds);
 
             jQuery('.subject-list ul').append(subjectTemplate);
         }
@@ -132,9 +461,19 @@ jQuery(document).ready(function() {
                                     </ul> \
                                 </div>'
         for(d in subjects) {
-                var accountTemplate = "<li class='account' data-account-name='{{ACCOUNTNAME}}'>{{ACCOUNTNAME}}</li>";
+                var accountTemplate = '<div class="account-info"><div class="name">{{NAME}}</div><div class="account-number">{{ACCOUNT}}</div> \
+                                        <div class="address">{{ADDRESS}}</div> \
+                                        <div class="phone-number">{{PHONE}}</div> \
+                                        <div class="psof">{{FUNDSOURCE}}</div> \
+                                        </div>';
+
                 var account = accountTemplate;
-                account = account.replace(/{{ACCOUNTNAME}}/g, subjects[d].account_number);
+                account = account.replace(/{{NAME}}/g, subjects[d].account_number);
+                account = account.replace(/{{ACCOUNT}}/g, subjects[d].account_number);
+                account = account.replace(/{{ADDRESS}}/g, subjects[d].account_number);
+                account = account.replace(/{{PHONE}}/g, subjects[d].account_number);
+                account = account.replace(/{{FUNDSOURCE}}/g, subjects[d].account_number);
+
                 accountsMarkup += account;
         }
 
@@ -143,6 +482,11 @@ jQuery(document).ready(function() {
         jQuery('.main-block .accounts-container').empty();
         jQuery('.main-block .accounts-container').append(accountsTemplate);
     }
+
+    function triggerNotification() {
+        jQuery('.notifications').addClass('active');
+        jQuery('.notifications').attr('data-notification-count', 1);
+    };
 
     function buildTransactions(data, target) {
         target.empty()
