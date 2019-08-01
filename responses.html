@@ -74,7 +74,7 @@
                             <p>
                                 Pursuant to Section 314(b) of the USA PATRIOT Act and 31 CFR
                                 1010540, Berry Western Bank is initiating an information
-                                sharing request to [BANK NAME HERE].
+                                sharing request to ${txn.originator_financial_institution_name_std}.
                                 The information shared is subject to confidentiality
                                 provisions of Section 314(b) and implementing regulations
                             </p>
@@ -104,13 +104,13 @@
                                     <li>
                                         What are the source of funds?
                                         <ul style="margin:10px;">
-                                            <li>${[0, 1, 2].map((i) => generateTransactionEl(caseData.transactions[i])).join('</li><li>')}</li>
+                                            <li>${[10, 11, 12].map((i) => generateTransactionEl(caseData.transactions[i])).join('</li><li>')}</li>
                                         </ul>
                                     </li>
                                     <li>
                                         What are the use of funds?
                                         <ul style="margin:10px;">
-                                            <li>${[4, 5].map((i) => generateTransactionEl(caseData.transactions[i])).join('</li><li>')}</li>
+                                            <li>${[14, 15].map((i) => generateTransactionEl(caseData.transactions[i])).join('</li><li>')}</li>
                                         </ul>
                                     </li>
                                     <li>
@@ -137,7 +137,6 @@
             txnIds = transactionIdsParam.split(',');
             // Iterate over ids and render the sections in "Pending"
             txnIds.forEach((id) => {
-                console.log('here')
                 var txn = caseData.transactions.find((el) => el.id == id);
                 $('.pending-container').append(generateTransactionEl(txn));
                 $('.completed-container').append(generateQuestionaire(txn));
