@@ -9,6 +9,7 @@
     <script type="text/javascript" src="script\bootstrap.min.js"></script>
     <script type="text/javascript" src="script\main.js"></script>
     <script type="text/javascript" src="script\underscore-min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="script\customerdata.json"></script>
     <script src="script\transactiondata.json"></script>
     <script type="text/javascript">
@@ -136,6 +137,7 @@
             var transactionIdsParam = getUrlParams('ids');
             txnIds = transactionIdsParam.split(',');
             // Iterate over ids and render the sections in "Pending"
+            var doneCount = 0;
             txnIds.forEach((id) => {
                 var txn = caseData.transactions.find((el) => el.id == id);
                 $('.pending-container').append(generateTransactionEl(txn));
@@ -143,8 +145,101 @@
                 setTimeout(function () {
                     $(`#txn-pending-${id}`).hide({ duration: 500 });
                     $(`#txn-complete-${id}`).show({ duration: 500 });
-                    triggerNotification();
-                }, Math.floor((Math.random() * 10) + 2) * 1000);
+					triggerNotification();
+                    if (++doneCount == txnIds.length) {
+                        $('.subject-list').hide();
+                        $('.gen-graph').attr('disabled', false)
+                    }
+                    console.log(doneCount);
+                }, 1000); //Math.floor((Math.random() * 10) + 2) * 1000);
+            });
+
+            $('.gen-graph').on('click', function(evt) {
+                $('#graphModal').modal('show');
+                setTimeout(function() {
+                    var svg = d3.select("svg"),
+                        width = +svg.attr("width"),
+                        height = +svg.attr("height");
+
+                    var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+                    var simulation = d3.forceSimulation()
+                        .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(100))
+                        .force("charge", d3.forceManyBody())
+                        .force("center", d3.forceCenter(width / 2, height / 2));
+
+                    d3.json("script/transactiondata.json", function(error, graph) {
+                        if (error) throw error;
+
+                        var link = svg.append("g")
+                            .attr("class", "links")
+                        .selectAll("line")
+                        .data(graph.links)
+                        .enter().append("line")
+                            .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+                        var node = svg.append("g")
+                            .attr("class", "nodes")
+                        .selectAll("g")
+                        .data(graph.nodes)
+                        .enter().append("g")
+
+                        var circles = node.append("circle")
+                            .attr("r", 5)
+                            .attr("fill", function(d) { return color(d.originator_financial_institution_name_std); })
+                            .call(d3.drag()
+                                .on("start", dragstarted)
+                                .on("drag", dragged)
+                                .on("end", dragended));
+
+                        var lables = node.append("text")
+                            .text(function(d) {
+                            return d.id;
+                            })
+                            .attr('x', 6)
+                            .attr('y', 3);
+
+                        node.append("title")
+                            .text(function(d) { return d.id; });
+
+                        simulation
+                            .nodes(graph.nodes)
+                            .on("tick", ticked);
+
+                        simulation.force("link")
+                            .links(graph.links);
+
+                        function ticked() {
+                        link
+                            .attr("x1", function(d) { return d.source.x; })
+                            .attr("y1", function(d) { return d.source.y; })
+                            .attr("x2", function(d) { return d.target.x; })
+                            .attr("y2", function(d) { return d.target.y; });
+
+                        node
+                            .attr("transform", function(d) {
+                                return "translate(" + d.x + "," + d.y + ")";
+                            })
+                        }
+                    });
+
+                    function dragstarted(d) {
+                        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+                        d.fx = d.x;
+                        d.fy = d.y;
+                    }
+
+                    function dragged(d) {
+                        d.fx = d3.event.x;
+                        d.fy = d3.event.y;
+                    }
+
+                    function dragended(d) {
+                        if (!d3.event.active) simulation.alphaTarget(0);
+                        d.fx = null;
+                        d.fy = null;
+                    }
+                }, 500);
             });
         });
     </script>
@@ -233,47 +328,19 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="modal fade" id="subjectModal" tabindex="-1" role="dialog" data-backdrop="static"
-                            data-keyboard="false" aria-labelledby="subjectModal" aria-hidden="true"
-                            style="display: none;">
-                            <div class="modal-dialog modal-lg subject-modal" role="document" data-backdrop="static"
-                                data-keyboard="false">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="subject-modal-title"><span
-                                                class="subject-name"></span><span class="account-name"></span></h3>
-
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <i class="fa fa-close"></i>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="transaction-container">
-                                            <div class="transactions">
-                                                <ul class="transaction-list">
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Cancel</button>
-                                        <button type="button" class="btn btn-primary submitButton"
-                                            disabled>Submit</button>
-                                    </div>
-                                </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center" style="margin: 20px;">
+                                <button class="gen-graph btn btn-lg btn-primary" disabled>Generate Transaction Graph</button>
                             </div>
                         </div>
-                        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" data-backdrop="static"
+                        <div class="modal fade" id="graphModal" tabindex="-1" role="dialog" data-backdrop="static"
                             data-keyboard="false" aria-labelledby="contactModal" aria-hidden="true"
                             style="display: none;">
-                            <div class="modal-dialog modal-md contact-modal" role="document" data-backdrop="static"
+                            <div class="modal-dialog modal-lg contact-modal" role="document" data-backdrop="static"
                                 data-keyboard="false">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h3 class="modal-title" id="subject-modal-title"></h3>
+                                        <h3 class="modal-title" id="subject-modal-title">Transaction Graph</h3>
 
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <i class="fa fa-close"></i>
@@ -281,7 +348,36 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="contact-container">
+                                                <style>
+                                                        .links line {
+                                                          stroke: #999;
+                                                          stroke-opacity: 0.6;
+                                                        }
 
+                                                        .nodes circle {
+                                                          stroke: #fff;
+                                                          stroke-width: 1.5px;
+                                                        }
+
+                                                        text {
+                                                          font-family: sans-serif;
+                                                          font-size: 10px;
+                                                        }
+                                                        div.tooltip {
+                                                            position: absolute;
+                                                            text-align: center;
+                                                            width: 60px;
+                                                            height: 28px;
+                                                            padding: 2px;
+                                                            font: 12px sans-serif;
+                                                            background: lightsteelblue;
+                                                            border: 0px;
+                                                            border-radius: 8px;
+                                                            pointer-events: none;
+                                                        }
+
+                                                        </style>
+                                                        <svg width="800" height="400"></svg>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
